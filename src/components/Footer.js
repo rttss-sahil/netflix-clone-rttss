@@ -3,10 +3,10 @@ import React from 'react';
 const footer = () => (
   <footer className="footer">
     <div className="footer__copyright">
-      &copy; 2018 Made with ❤️ by{' '}
-      <a className="footer__copyright--link" href="http://andresio.com">
+      &copy; {(new Date).getFullYear()} Made with ❤️ by{' '}
+      <a className="footer__copyright--link" href="https://github.com/rttss-sahil">
         {' '}
-        Andres Alcocer
+        Sahil Rathee (rttss)
       </a>
     </div>
   </footer>
