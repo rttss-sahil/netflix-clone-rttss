@@ -18,12 +18,12 @@ export default function Header(props) {
           onClick={() => alert('not a movie!')}
           className="header__container-btnPlay"
         >
-          <PlayLogo className="header__container-btnMyList-play" />
+          <img src={PlayLogo} className="header__container-btnMyList-play" />
           Play
         </button>
 
         <button className="header__container-btnMyList">
-          <AddLogo className="header__container-btnMyList-add" />
+          <img src={AddLogo} className="header__container-btnMyList-add" />
           My List
         </button>
         <p className="header__container-overview">{props.movie.overview}</p>

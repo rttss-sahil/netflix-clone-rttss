@@ -1,5 +1,22 @@
 import React from 'react';
-import AppRouter from './AppRouter';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-const App = () => <AppRouter />;
+import Home from './Home';
+import NotFound from './NotFound';
+import Search from './Search';
+import Navbar from './Navbar';
+
+const App = () =>
+(
+    <BrowserRouter>
+        <>
+            <Navbar />
+            <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/search" component={Search} />
+                <Route component={NotFound} />
+            </Switch>
+        </>
+    </BrowserRouter>
+);
 export default App;

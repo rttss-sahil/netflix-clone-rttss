@@ -4,10 +4,12 @@ import _ from 'lodash';
 import { withRouter } from 'react-router-dom';
 
 import axios from '../axios-movies';
+
 import SearchLogo from '../static/images/search-icon.svg';
 import NetflixLogo from '../static/images/Netflix_Logo_RGB.png';
 import BellLogo from '../static/images/bell-logo.svg';
 import DropdownArrow from '../static/images/drop-down-arrow.svg';
+
 import DropdownContent from "../components/DropdownContent";
 
 class Navbar extends Component {
@@ -76,7 +78,7 @@ class Navbar extends Component {
           <NavLink to="/" onClick={() => this.onLogoClick()}>
             <img className="navigation__container--logo" src={NetflixLogo} alt="" />
           </NavLink>
-          <DropdownArrow className="navigation__container--downArrow-2"></DropdownArrow>
+          <img src={DropdownArrow} className="navigation__container--downArrow-2" />
           <div className="navigation__container-link pseudo-link">Home</div>
           <div className="navigation__container-link pseudo-link">TV Shows</div>
           <div className="navigation__container-link pseudo-link">Movies</div>
@@ -84,7 +86,7 @@ class Navbar extends Component {
           <div className="navigation__container-link pseudo-link">My List</div>
 
           <div className="navigation__container--left">
-            <SearchLogo className="logo" />
+            <img src={SearchLogo} className="logo" />
             <input
               value={this.state.userInput}
               onChange={() => this.onChange(event)}
@@ -95,10 +97,10 @@ class Navbar extends Component {
 
           <div className="navigation__container-link pseudo-link">KIDS</div>
           <div className="navigation__container-link pseudo-link">DVD</div>
-          <BellLogo className="navigation__container--bellLogo" />
+          <img src={BellLogo} className="navigation__container--bellLogo" />
 
           <DropdownContent />
-          <DropdownArrow className="navigation__container--downArrow" />
+          <img src={DropdownArrow} className="navigation__container--downArrow" />
         </ul>
       </nav>
     )

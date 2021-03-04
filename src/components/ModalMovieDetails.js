@@ -24,11 +24,11 @@ export default function ModalMovieDetails(props) {
         </p>
         <p className="modal__overview">{props.movie.overview}</p>
         <button className="modal__btn modal__btn--red">
-          <PlayIcon className="modal__btn--icon" />
+          <img src={PlayIcon} className="modal__btn--icon" />
           Play
         </button>
         <button className="modal__btn">
-          <AddIcon className="modal__btn--icon" />
+          <img src={AddIcon} className="modal__btn--icon" />
           My List
         </button>
       </div>
