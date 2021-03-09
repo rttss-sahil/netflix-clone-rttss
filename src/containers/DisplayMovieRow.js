@@ -12,7 +12,7 @@ export default class DisplayMovieRow extends Component {
     };
   }
 
-  componentDidMount() {
+  UNSAFE_componentWillMount() {
     window.addEventListener("resize", this.handleResize);
   }
 
@@ -29,7 +29,7 @@ export default class DisplayMovieRow extends Component {
     let netflixUrl = false;
     if (
       this.props.url ===
-      `/discover/tv?api_key=${process.env.API_KEY}&with_networks=213`
+      `/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_networks=213`
     ) {
       netflixUrl = true;
     }
@@ -77,7 +77,7 @@ export default class DisplayMovieRow extends Component {
               'https://image.tmdb.org/t/p/w500/' + movie.backdrop_path;
             if (
               this.props.url ===
-              `/discover/tv?api_key=${process.env.API_KEY}&with_networks=213`
+              `/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_networks=213`
             ) {
               movieImageUrl =
                 'https://image.tmdb.org/t/p/original/' + movie.poster_path;

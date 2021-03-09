@@ -18,7 +18,7 @@
 
 - Install dependencies: run `npm install` in root project
 - Get API key from [here](https://www.themoviedb.org/settings/api)
-- Create .env file in root project and add: `API_KEY=YOUR_API_KEY_HERE`
+- Create .env file in root project and add: `REACT_APP_API_KEY=YOUR_API_KEY_HERE`
 - Run project: `npm start`
 
 Made with ❤️ by Sahil Rathee [(rttss)](https://github.com/rttss-sahil)

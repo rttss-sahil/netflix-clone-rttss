@@ -43,11 +43,11 @@ export default class Search extends Component {
     /** Make the appropriate API call to get the details for a single movie or tv show. */
     if (movie.media_type === "movie") {
       const movieId = movie.id;
-      url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`;
+      url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}`;
 
     } else if (movie.media_type === "tv") {
       const tvId = movie.id
-      url = `https://api.themoviedb.org/3/tv/${tvId}?api_key=${process.env.API_KEY}`;
+      url = `https://api.themoviedb.org/3/tv/${tvId}?api_key=${process.env.REACT_APP_API_KEY}`;
     }
 
     axios.get(url)
@@ -90,19 +90,19 @@ export default class Search extends Component {
               }
             </div>
           ) : (
-              <div className="no-results">
-                <div className="no-results__text">
-                  <p>Your search for "{userInput}" did not have any matches.</p>
-                  <p>Suggestions:</p>
-                  <ul>
-                    <li>Try different keywords</li>
-                    <li>Looking for a movie or TV show?</li>
-                    <li>Try using a movie, TV show title, an actor or director</li>
-                    <li>Try a genre, like comedy, romance, sports, or drama</li>
-                  </ul>
-                </div>
+            <div className="no-results">
+              <div className="no-results__text">
+                <p>Your search for "{userInput}" did not have any matches.</p>
+                <p>Suggestions:</p>
+                <ul>
+                  <li>Try different keywords</li>
+                  <li>Looking for a movie or TV show?</li>
+                  <li>Try using a movie, TV show title, an actor or director</li>
+                  <li>Try a genre, like comedy, romance, sports, or drama</li>
+                </ul>
               </div>
-            )
+            </div>
+          )
         }
         <Modal Modal show={this.state.toggleModal}
           modalClosed={this.closeModal}

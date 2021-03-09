@@ -54,7 +54,7 @@ class Navbar extends Component {
       this.props.history.push('/')
       return
     }
-    const url = `/search/multi?api_key=${process.env.API_KEY}&language=en-US&include_adult=false&query=${searchItem}`;
+    const url = `/search/multi?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&include_adult=false&query=${searchItem}`;
     const response = await axios.get(url);
     const results = response.data.results;
     this.props.history.push({
@@ -107,4 +107,4 @@ class Navbar extends Component {
   }
 }
 
-export default withRouter(Navbar); 
+export default withRouter(Navbar);

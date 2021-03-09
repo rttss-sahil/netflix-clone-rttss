@@ -11,7 +11,7 @@ export const FETCH_DOCUMENTARIES = 'FETCH_DOCUMENTARIES';
 
 export function fetchTrending() {
   const request = axios.get(
-    `/trending/all/week?api_key=${process.env.API_KEY}&language=en-US`
+    `/trending/all/week?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
   );
 
   return {
@@ -22,7 +22,7 @@ export function fetchTrending() {
 
 export function fetchNetflixOriginals() {
   const request = axios.get(
-    `/discover/tv?api_key=${process.env.API_KEY}&with_networks=213`
+    `/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_networks=213`
   );
 
   return {
@@ -33,7 +33,7 @@ export function fetchNetflixOriginals() {
 
 export function fetchTopRated() {
   const request = axios.get(
-    `/movie/top_rated?api_key=${process.env.API_KEY}&language=en-US`
+    `/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
   );
 
   return {
@@ -44,7 +44,7 @@ export function fetchTopRated() {
 
 export function fetchActionMovies() {
   const request = axios.get(
-    `/discover/movie?api_key=${process.env.API_KEY}&with_genres=28`
+    `/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=28`
   );
 
   return {
@@ -55,7 +55,7 @@ export function fetchActionMovies() {
 
 export function fetchComedyMovies() {
   const request = axios.get(
-    `/discover/movie?api_key=${process.env.API_KEY}&with_genres=35`
+    `/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=35`
   );
 
   return {
@@ -66,7 +66,7 @@ export function fetchComedyMovies() {
 
 export function fetchHorrorMovies() {
   const request = axios.get(
-    `/discover/movie?api_key=${process.env.API_KEY}&with_genres=27`
+    `/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=27`
   );
 
   return {
@@ -77,7 +77,7 @@ export function fetchHorrorMovies() {
 
 export function fetchRomanceMovies() {
   const request = axios.get(
-    `/discover/movie?api_key=${process.env.API_KEY}&with_genres=10749`
+    `/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=10749`
   );
 
   return {
@@ -88,7 +88,7 @@ export function fetchRomanceMovies() {
 
 export function fetchDocumentaries() {
   const request = axios.get(
-    `/discover/movie?api_key=${process.env.API_KEY}&with_genres=99`
+    `/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=99`
   );
 
   return {

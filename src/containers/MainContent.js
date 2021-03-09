@@ -25,37 +25,37 @@ class MainContent extends Component {
     movieInfo: [
       {
         title: 'Netflix Originals',
-        url: `/discover/tv?api_key=${process.env.API_KEY}&with_networks=213`,
+        url: `/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_networks=213`,
         movies: [],
       },
       {
         title: 'Trending Now',
-        url: `/trending/all/week?api_key=${process.env.API_KEY}&language=en-US`,
+        url: `/trending/all/week?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,
         movies: [],
       },
       {
         title: 'Top Rated',
-        url: `/movie/top_rated?api_key=${process.env.API_KEY}&language=en-US`,
+        url: `/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,
         movies: [],
       },
       {
         title: 'Action Movies',
-        url: `/discover/movie?api_key=${process.env.API_KEY}&with_genres=28`,
+        url: `/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=28`,
         movies: [],
       },
       {
         title: 'Comedy Movies',
-        url: `/discover/tv?api_key=${process.env.API_KEY}&with_genres=35`,
+        url: `/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_genres=35`,
         movies: [],
       },
       {
         title: 'Horror Movies',
-        url: `/discover/tv?api_key=${process.env.API_KEY}&with_genres=27`,
+        url: `/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_genres=27`,
         movies: [],
       },
       {
         title: 'Documentaries',
-        url: `/discover/tv?api_key=${process.env.API_KEY}&with_genres=99`,
+        url: `/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_genres=99`,
         movies: [],
       },
     ],
@@ -102,7 +102,7 @@ class MainContent extends Component {
     /** Movie Id for the Narcos series  */
     const movieId = 63351;
     /** Make Api call to retrieve the details for a single movie  */
-    const url = `https://api.themoviedb.org/3/tv/${movieId}?api_key=${process.env.API_KEY}`;
+    const url = `https://api.themoviedb.org/3/tv/${movieId}?api_key=${process.env.REACT_APP_API_KEY}`;
     axios
       .get(url)
       .then(res => {
@@ -167,4 +167,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MainContent); 
+)(MainContent);

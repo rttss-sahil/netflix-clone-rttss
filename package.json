@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "webpack-dev-server --mode development --config webpack.config.js --open",
-    "build": "webpack -p",
+    "start": "react-scripts start",
+    "dev": "webpack-dev-server --mode development --config webpack.config.js --open",
+    "build": "react-scripts build",
     "lint": "eslint --fix . && echo 'Lint complete.'"
   },
   "engines": {
@@ -46,9 +46,7 @@
     "svg-react-loader": "^0.4.6",
     "tap-nirvana": "^1.1.0",
     
-    "watch": "^1.0.2",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "watch": "^1.0.2"
   },
   "browserslist": {
     "production": [

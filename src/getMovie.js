@@ -6,7 +6,7 @@ export function getMovieRows(movies, url) {
     let movieImageUrl =
       'https://image.tmdb.org/t/p/w500/' + movie.backdrop_path;
     if (
-      url === `/discover/tv?api_key=${process.env.API_KEY}&with_networks=213`
+      url === `/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_networks=213`
     ) {
       movieImageUrl =
         'https://image.tmdb.org/t/p/original/' + movie.poster_path;
