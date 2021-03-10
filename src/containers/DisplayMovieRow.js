@@ -12,7 +12,7 @@ export default class DisplayMovieRow extends Component {
     };
   }
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     window.addEventListener("resize", this.handleResize);
   }
 

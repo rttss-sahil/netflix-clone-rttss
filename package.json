@@ -17,9 +17,9 @@
   "author": "Sahil Rathee",
   "license": "MIT",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "axios": "^0.18.1",
     "lodash": "^4.17.19",
-    "prop-types": "^15.6.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^6.0.1",
@@ -31,22 +31,15 @@
     "swiper": "^6.1.1"
   },
   "devDependencies": {
-    
-    "css-loader": "^1.0.1",
+    "customize-cra": "^1.0.0",
     "dotenv": "^6.2.0",
-    "eslint": "^6.8.0",
-    
     "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "prettier": "^2.0.5",
     "react-owl-carousel2": "^0.3.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "svg-inline-loader": "^0.8.0",
-    "svg-react-loader": "^0.4.6",
-    "tap-nirvana": "^1.1.0",
-    
-    "watch": "^1.0.2"
+    "svg-react-loader": "^0.4.6"
   },
   "browserslist": {
     "production": [

@@ -104,7 +104,7 @@ export default class Search extends Component {
             </div>
           )
         }
-        <Modal Modal show={this.state.toggleModal}
+        <Modal show={this.state.toggleModal}
           modalClosed={this.closeModal}
           movie={this.state.movieOverview} >
           <MovieDetails movie={this.state.movieOverview} />
